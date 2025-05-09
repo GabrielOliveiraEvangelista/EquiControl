@@ -15,8 +15,6 @@ Exemplo: `1.4.2`
 - `1.1.0` → adição de um novo recurso
 - `1.1.1` → correção de um bug no recurso
 
----
-
 ## 🛠️ Como realizar versionamento no Git
 
 ### ✅ Passo a passo para aplicar uma nova versão:
