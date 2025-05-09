@@ -1,4 +1,4 @@
-### Changelog - EquiControl
+# Changelog - EquiControl
 
 ---
 
