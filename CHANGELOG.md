@@ -1,5 +1,7 @@
 # Changelog - EquiControl
 
+---
+
 ## 📌 Versionamento do Projeto
 
 Segue o padrão **MAJOR.MINOR.PATCH**  
