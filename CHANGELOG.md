@@ -52,24 +52,25 @@ git commit -m "UPDATE IN CHANGELOG.md FILE 09-05-2025 12:02H"
 git push -u origin main
 
 ```
+
 ## 🚧 Em Desenvolvimento
 
 ### 🔄 Ajustes atuais
+
 - [x] **Implementação do Docker** no Backend
 
 ### 📅 Ajustes planejados
-- [ ] Definir estrutura do **schema global Zod**  
-- [ ] Refatorar arquivos que usam `if` para validar **variáveis de ambiente**  
+
+- [ ] Definir estrutura do **schema global Zod**
+- [ ] Refatorar arquivos que usam `if` para validar **variáveis de ambiente**
 - [ ] Migrar validações de **`ABQM_USUARIO`** e **`ABQM_SENHA`** para o _frontend_
 
 ---------------------------------------LOG'S-------------------------------------------------
+
 ## 📘 Log de Versões – Backend
 
-### 🏷️ `v1.0.0` • 09 / 05 / 2024  
+### 🏷️ `v1.0.0` • 09 / 05 / 2025
+
 🔹 **Versão inicial estável** do projeto
 
----
-
 ## 📘 Log de Versões – Frontend
-
-
