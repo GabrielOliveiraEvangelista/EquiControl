@@ -57,7 +57,8 @@ git push -u origin main
 
 ### 🔄 Ajustes atuais
 
-- [x] **Implementação do Docker** no Backend
+- [x] Implementação do Docker no Backend
+- [ ] Implementação do ORM (Prisma) no Backend
 
 ### 📅 Ajustes planejados
 
@@ -71,6 +72,9 @@ git push -u origin main
 
 ### 🏷️ `v1.0.0` • 09 / 05 / 2025
 
-🔹 **Versão inicial estável** do projeto
+🔹 Versão inicial estável do projeto
 
-## 📘 Log de Versões – Frontend
+### 🏷️ `v1.1.0` • 16 / 05 / 2025
+
+🔹 Implementação do Docker Compose
+
