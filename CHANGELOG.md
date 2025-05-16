@@ -1,17 +1,15 @@
 # Changelog - EquiControl
 
----
-
 ## 📌 Versionamento do Projeto
 
 Segue o padrão **MAJOR.MINOR.PATCH**  
-Exemplo: `1.4.2`
+Ex: `1.4.2`
 
 - **MAJOR** → alterações incompatíveis com versões anteriores
 - **MINOR** → novas funcionalidades, sem quebrar compatibilidade
 - **PATCH** → correções de bugs e melhorias internas
 
-### 🧪 Exemplos de versões:
+### Exemplos de versões:
 
 - `1.0.0` → primeira versão estável
 - `1.1.0` → adição de um novo recurso
@@ -19,7 +17,7 @@ Exemplo: `1.4.2`
 
 ## 🛠️ Como realizar versionamento no Git
 
-### ✅ Passo a passo para aplicar uma nova versão:
+### Passo a passo para aplicar uma nova versão:
 
 ```bash
 git add <PASTA ALTERADA: API-EQUICONTROL ou FRONT-EQUICONTROL>
@@ -30,7 +28,7 @@ git push --tags
 
 ```
 
-### 📄 Exemplo (Backend):
+### Exemplo (Backend):
 
 ```bash
 # 1 - Adiciona os arquivos alterados na pasta do backend
@@ -62,13 +60,11 @@ git push -u origin main
 
 ### 📅 Ajustes planejados
 
-- [ ] Definir estrutura do **schema global Zod**
-- [ ] Refatorar arquivos que usam `if` para validar **variáveis de ambiente**
+- [x] Definir estrutura do **schema global Zod**
+- [x] Refatorar arquivos que usam `if` para validar **variáveis de ambiente**
 - [ ] Migrar validações de **`ABQM_USUARIO`** e **`ABQM_SENHA`** para o _frontend_
 
----------------------------------------LOG'S-------------------------------------------------
-
-## 📘 Log de Versões – Backend
+## 🗄️ Log de Versões – Backend
 
 ### 🏷️ `v1.0.0` • 09 / 05 / 2025
 
@@ -77,4 +73,3 @@ git push -u origin main
 ### 🏷️ `v1.1.0` • 16 / 05 / 2025
 
 🔹 Implementação do Docker Compose
-

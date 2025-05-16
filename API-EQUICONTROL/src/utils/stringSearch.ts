@@ -1,6 +1,7 @@
 import axios from 'axios';
 import 'dotenv/config';
 import { AppError } from './AppError';
+import { env } from '../types/env';
 
 export async function fetchAnimalPorNomeRegistro(termo: string, token: string) {
   async function getAnimalByString(termo: string, token: string) {
@@ -9,13 +10,7 @@ export async function fetchAnimalPorNomeRegistro(termo: string, token: string) {
       tipo_pessoa: 'pf',
       tipoAnimal: 1,
     };
-    const { ABQM_API_CONSULTA_STRING } = process.env;
-    if (!ABQM_API_CONSULTA_STRING) {
-      throw new AppError(
-        'Verifique a variavel ABQM_CONSULTA_POR_PROPRIEDADE tem algo de errado com ela !'
-      );
-    }
-    const { data } = await axios.post(ABQM_API_CONSULTA_STRING, payload, {
+    const { data } = await axios.post(env.ABQM_API_CONSULTA_STRING, payload, {
       headers: {
         Authorization: `Basic ${token}`,
         'Content-Type': 'application/json;charset=UTF-8',
@@ -25,14 +20,8 @@ export async function fetchAnimalPorNomeRegistro(termo: string, token: string) {
     return data.listDto[0];
   }
   async function getAnimalById(idAnimal: number, token: string) {
-    const { ABQM_API_CONSULTA } = process.env;
-    if (!ABQM_API_CONSULTA) {
-      throw new AppError(
-        'Verifique a variavel ABQM_CONSULTA_POR_PROPRIEDADE tem algo de errado com ela !'
-      );
-    }
     const { data } = await axios.post(
-      ABQM_API_CONSULTA,
+      env.ABQM_API_CONSULTA,
       { id_animal: String(idAnimal) },
       {
         headers: {
