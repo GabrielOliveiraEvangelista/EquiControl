@@ -11,10 +11,12 @@
   "author": "Gabriel Oliveira",
   "license": "ISC",
   "devDependencies": {
+    "prisma": "^6.8.2",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@prisma/client": "^6.8.2",
     "@types/express": "^5.0.1",
     "axios": "^1.9.0",
     "dotenv": "^16.5.0",

@@ -1,14 +1,14 @@
 services:
-  api:
-    build:
-      context: ./API-EQUICONTROL
-      dockerfile: Dockerfile
-    image: apiequicontrolimage
-    container_name: api
-    ports:
-      - "8080:8080"
-    depends_on:
-      - "db"
+  # api:
+  #   build:
+  #     context: ./API-EQUICONTROL
+  #     dockerfile: Dockerfile
+  #   image: apiequicontrolimage
+  #   container_name: api
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - "db"
 
   db:
     image: "postgres:13.21-alpine3.20"
