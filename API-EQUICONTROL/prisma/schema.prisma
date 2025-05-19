@@ -83,8 +83,8 @@ model Animal {
   id_criador                Int?
   id_proprietario           Int?
   id_laboratorio            Int?
-  exibe_laudo               String
-  acesso_laboratorio        String
+  exibe_laudo               Boolean
+  acesso_laboratorio        Boolean
   situacao_esportes         String?
   hall_da_fama              Int?
   qtdFilhos                 Int?
@@ -101,15 +101,6 @@ model Animal {
   @@map("animals")
 }
 model AnimalAncestral {
-  id                      Int     @id @default(autoincrement())
-  id_animal               Int     
-  nome_animal             String
-  registro_abqm           String
-  registro_original       String?
-  pelagem                 String
-  hypp                    Int?
-  impressive              Int?
-
   id_pai                  Int?
   nome_pai                String?
   registro_pai            String?
@@ -353,5 +344,5 @@ model AnimalAncestral {
 
   animalId                Int     @unique
   animal                  Animal   @relation(fields: [animalId], references: [id])
-
+  @@map("animal_ancestral")
 }

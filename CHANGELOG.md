@@ -32,7 +32,7 @@ git push --tags
 
 ```bash
 # 1 - Adiciona os arquivos alterados na pasta do backend
-git add API-EQUICONTROL
+git add API-EQUICONTROL CHANGELOG.md
 
 # 2 - Cria o commit com data e hora
 git commit -m "BACKEND IMPLEMENTATION 09-05-2025 11:55H"
@@ -44,10 +44,6 @@ git tag -a backend@v1.1.0 -m "DESCRIPTION IN CHANGELOG FILE"
 git push -u origin main
 git push --tags
 
-# 5 - Atualiza o changelog e faz novo commit
-git add CHANGELOG.md
-git commit -m "UPDATE IN CHANGELOG.md FILE 09-05-2025 12:02H"
-git push -u origin main
 
 ```
 
@@ -56,14 +52,16 @@ git push -u origin main
 ### 🔄 Ajustes atuais
 
 - [x] Implementação do Docker no Backend
-- [ ] Implementação do ORM (Prisma) no Backend
+- [x] Implementação do ORM (Prisma) no Backend
+- [x] Implementação dos models no schema.prima
+- [ ] Refatoração do UsersController (data.forEach)
 
 ### 📅 Ajustes planejados
 
 - [x] Definir estrutura do **schema global Zod**
 - [x] Refatorar arquivos que usam `if` para validar **variáveis de ambiente**
 - [ ] Migrar validações de **`ABQM_USUARIO`** e **`ABQM_SENHA`** para o _frontend_
-- [ ] Tratar os dados que esta vindo do JSON e ajustar as colunas do banco para tal ajuste
+- [ ] Tratar os dados que esta vindo do JSON e ajustar as colunas do banco para tal ajuste (DATATIME, BOOLEAN)
 
 ## 🗄️ Log de Versões – Backend
 
@@ -74,3 +72,8 @@ git push -u origin main
 ### 🏷️ `v1.1.0` • 16 / 05 / 2025
 
 🔹 Implementação do Docker Compose
+
+### 🏷️ `v1.2.0` • ? / 05 / 2025
+
+🔹 Implementação do Prisma ORM
+🔹 Modelagem das tabelas do banco de dados
