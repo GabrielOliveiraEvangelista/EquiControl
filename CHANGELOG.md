@@ -54,7 +54,7 @@ git push --tags
 - [x] Implementação do Docker no Backend
 - [x] Implementação do ORM (Prisma) no Backend
 - [x] Implementação dos models no schema.prima
-- [ ] Refatoração do UsersController (data.forEach)
+- [x] Refatoração do UsersController (data.forEach)
 
 ### 📅 Ajustes planejados
 
@@ -73,7 +73,8 @@ git push --tags
 
 🔹 Implementação do Docker Compose
 
-### 🏷️ `v1.2.0` • ? / 05 / 2025
+### 🏷️ `v1.2.0` • 19 / 05 / 2025
 
 🔹 Implementação do Prisma ORM
+
 🔹 Modelagem das tabelas do banco de dados
