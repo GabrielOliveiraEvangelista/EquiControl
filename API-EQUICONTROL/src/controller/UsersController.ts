@@ -70,25 +70,21 @@ export class UsersController {
         if (!animalId) {
           return;
         }
-        const {
-          id_animal,
-          nome_animal,
-          registro_abqm,
-          registro_original,
-          pelagem,
-          hypp,
-          impressive,
-          ...resto
-        } = dataGenealogy;
         await prisma.animalAncestral.create({
           data: {
-            ...resto,
+            ...dataGenealogy,
             animalId: animalId.id,
           },
         });
       });
-      res.json("Informações de usuario, animal e genealogia gravadas com sucesso")
+      res.json({
+        ACTION: "CREATE",
+        USER: nome,
+      });
+    } else {
+      res.status(409).json({
+        MESSAGE: `${user.nome} JA CRIADO`,
+      });
     }
-    res.json("Usuario ja existente");
   }
 }

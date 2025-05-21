@@ -4,6 +4,7 @@ import { ZodError } from "zod";
 import { isToken } from "./middleware/authToken";
 import { routes } from "./routes";
 import { AppError } from "./utils/AppError";
+import { Prisma } from "@prisma/client";
 
 const server = express();
 server.use(express.json());
@@ -18,6 +19,15 @@ server.use((err: any, req: Request, res: Response, next: NextFunction) => {
   }
   if (err instanceof ZodError) {
     res.status(400).json({ error_client_zod: "aaa", issues: err.format() });
+  }
+  if (
+    err instanceof Prisma.PrismaClientKnownRequestError ||
+    err instanceof Prisma.PrismaClientUnknownRequestError ||
+    err instanceof Prisma.PrismaClientRustPanicError ||
+    err instanceof Prisma.PrismaClientInitializationError ||
+    err instanceof Prisma.PrismaClientValidationError
+  ) {
+    res.json({ PrismaErr: err });
   }
   res.status(500).json({ error_server: err.message });
 });

@@ -62,6 +62,7 @@ git push --tags
 - [x] Refatorar arquivos que usam `if` para validar **variáveis de ambiente**
 - [ ] Migrar validações de **`ABQM_USUARIO`** e **`ABQM_SENHA`** para o _frontend_
 - [ ] Tratar os dados que esta vindo do JSON e ajustar as colunas do banco para tal ajuste (DATATIME, BOOLEAN)
+- [ ] Não posso deixar duas tarefas da mesma (com o mesmo title) para um mesmo animal
 
 ## 🗄️ Log de Versões – Backend
 

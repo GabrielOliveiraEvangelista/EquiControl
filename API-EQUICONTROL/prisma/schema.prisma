@@ -96,8 +96,9 @@ model Animal {
   qtdFilhosMacho            Int?
   qtdFilhosFemea            Int?
   userId                    Int
-  user                      User    @relation(fields: [userId], references: [id])
+  users                     User    @relation(fields: [userId], references: [id])
   ancestral                 AnimalAncestral?
+  tasks                     Task[]
   @@map("animals")
 }
 model AnimalAncestral {
@@ -345,4 +346,17 @@ model AnimalAncestral {
   animalId                Int     @unique
   animal                  Animal   @relation(fields: [animalId], references: [id])
   @@map("animal_ancestral")
+}
+model Task {
+  id          Int      @id @default(autoincrement())
+  title       String   
+  description String?  
+  date        DateTime 
+  done        Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  animalId    Int
+  animals     Animal   @relation(fields: [animalId], references: [id])
+  @@map("tasks")
 }
