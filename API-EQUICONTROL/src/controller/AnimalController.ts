@@ -1,11 +1,21 @@
 import { Request, Response } from "express";
-
-import { fetchAnimalPorNomeRegistro } from "../utils/stringSearch";
-import { getGenealogy } from "../utils/genealogySearch";
+import { prisma } from "../database/prisma";
+import { calcularIdade } from "../utils/calcularIdade";
 
 export class AnimalController {
   async index(req: Request, res: Response) {
-  //TUDO
+    const animais = await prisma.animal.findMany({
+      select: {
+        nome_animal: true,
+        dt_nascimento: true,
+      },
+    });
+
+    const resultado = animais.map((animal) => ({
+      name: animal.nome_animal,
+      age: calcularIdade(animal.dt_nascimento),
+    }));
+    res.json(resultado);
   }
   async show(req: Request, res: Response) {
     //PARTE

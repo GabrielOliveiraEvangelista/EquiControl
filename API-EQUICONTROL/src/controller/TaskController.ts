@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { prisma } from "../database/prisma";
+import { string } from "zod/v4";
 
 export class TaskController {
   async create(req: Request, res: Response) {
@@ -22,7 +23,28 @@ export class TaskController {
     }
   }
   async index(req: Request, res: Response) {
-    const taskTable = await prisma.task.findMany();
-    res.json(taskTable);
+    const { date } = req.body;
+    const dateAtual = new Date(date);
+    const nextDate = new Date(dateAtual);
+    nextDate.setDate(dateAtual.getDate() + 1);
+
+    const groupedTasks = await prisma.task.groupBy({
+      by: ["title"],
+      where: {
+        date: {
+          gte: dateAtual,
+          lt: nextDate,
+        },
+      },
+      _count: {
+        animalId: true,
+      },
+    });
+    const result = groupedTasks.map((item) => ({
+      task: item.title,
+      qtdAnimals: item._count.animalId,
+    }));
+
+    res.json(result);
   }
 }

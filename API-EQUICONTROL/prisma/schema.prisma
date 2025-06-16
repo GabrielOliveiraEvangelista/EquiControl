@@ -24,73 +24,26 @@ model User {
 model Animal {
   id                        Int     @id @default(autoincrement())
   id_animal                 Int     @unique
-  id_cobertura              Int?
   nome_animal               String
   registro_abqm             String
   registro_original         String?
-  sufixo_nome_animal        String?
   sexo_animal               String
   dt_nascimento             String
   dt_castracao              String?
-  dt_alteracao              String?
   dt_obito                  String?
   dsc_grau_sangue           String
   ds_pelagem                String
   nome_proprietario         String
   nome_comprador            String
   nome_criador              String
-  id_pai                    Int?
-  nome_pai                  String?
-  registro_pai              String?
-  id_mae                    Int?
-  nome_mae                  String?
-  registro_mae              String?
-  tipificacao_sanguinea     Int?
-  DNA_LINK                  String?
-  hypp                      Int?
-  hypp_string               String?
-  five_panel                String?
-  motivo_castracao          String?
-  path_fotos                String?
-  nro_chip                  String?
-  qtd_chip                  Int
-  dt_implantacao            String?
-  alienado                  String?
-  arrendado                 String?
-  chave                     String
-  dt_fim_temp_transf_emb    String?
   pontos                    Int
-  pk_imagem                 String?
-  placa                     Int
-  pdf                       String?
-  artigo_43                 String?
-  resenha                   String?
   situacao                  String
-  id_resultado_laboratorio  Int?
-  imagens                   String?
-  acessos                   Int
-  situacao_laboratorio      String?
-  impressive                Int?
-  num_preregistro           String?
-  dt_importacao             String?
-  dt_inclusao_lancamento    String?
-  dt_inclusao_situacao      String?
-  dt_inclusao               String?
-  dt_envio_doc              String?
-  linkchip                  String?
   possui_campanha           Int
   status_esportes           Int?
-  id_criador                Int?
-  id_proprietario           Int?
-  id_laboratorio            Int?
-  exibe_laudo               Boolean
-  acesso_laboratorio        Boolean
   situacao_esportes         String?
-  hall_da_fama              Int?
   qtdFilhos                 Int?
   somaPontos                Int?
   qtdFilhosComPontos        Int?
-  hall_da_fama_pessoa       Int?
   qtdFilhosMachoPontuados   Int?
   qtdFilhosFemeaPontuados   Int?
   qtdFilhosMacho            Int?
@@ -107,242 +60,182 @@ model AnimalAncestral {
   registro_pai            String?
   registro_original_pai   String?
   pelagem_pai             String?
-  hypp_pai                Int?
-  impressive_pai          Int?
-
+  
   id_mae                  Int?
   nome_mae                String?
   registro_mae            String?
   registro_original_mae   String?
   pelagem_mae             String?
-  hypp_mae                Int?
-  impressive_mae          Int?
-
+  
   // Gerações 1 a 14
   id_pai_1                Int?
   nome_pai_1              String?
   registro_pai_1          String?
   registro_original_pai_1 String?
   pelagem_pai_1           String?
-  hypp_pai_1              Int?
-  impressive_pai_1        Int?
-
+  
   id_mae_1                Int?
   nome_mae_1              String?
   registro_mae_1          String?
   registro_original_mae_1 String?
   pelagem_mae_1           String?
-  hypp_mae_1              Int?
-  impressive_mae_1        Int?
-
+  
   id_pai_2                Int?
   nome_pai_2              String?
   registro_pai_2          String?
   registro_original_pai_2 String?
   pelagem_pai_2           String?
-  hypp_pai_2              Int?
-  impressive_pai_2        Int?
-
+  
   id_mae_2                Int?
   nome_mae_2              String?
   registro_mae_2          String?
   registro_original_mae_2 String?
   pelagem_mae_2           String?
-  hypp_mae_2              Int?
-  impressive_mae_2        Int?
-
+  
   id_pai_3                Int?
   nome_pai_3              String?
   registro_pai_3          String?
   registro_original_pai_3 String?
   pelagem_pai_3           String?
-  hypp_pai_3              Int?
-  impressive_pai_3        Int?
-
+  
   id_mae_3                Int?
   nome_mae_3              String?
   registro_mae_3          String?
   registro_original_mae_3 String?
   pelagem_mae_3           String?
-  hypp_mae_3              Int?
-  impressive_mae_3        Int?
-
+  
   id_pai_4                Int?
   nome_pai_4              String?
   registro_pai_4          String?
   registro_original_pai_4 String?
   pelagem_pai_4           String?
-  hypp_pai_4              Int?
-  impressive_pai_4        Int?
-
+  
   id_mae_4                Int?
   nome_mae_4              String?
   registro_mae_4          String?
   registro_original_mae_4 String?
   pelagem_mae_4           String?
-  hypp_mae_4              Int?
-  impressive_mae_4        Int?
-
+  
   id_pai_5                Int?
   nome_pai_5              String?
   registro_pai_5          String?
   registro_original_pai_5 String?
   pelagem_pai_5           String?
-  hypp_pai_5              Int?
-  impressive_pai_5        Int?
-
+  
   id_mae_5                Int?
   nome_mae_5              String?
   registro_mae_5          String?
   registro_original_mae_5 String?
   pelagem_mae_5           String?
-  hypp_mae_5              Int?
-  impressive_mae_5        Int?
-
+  
   id_pai_6                Int?
   nome_pai_6              String?
   registro_pai_6          String?
   registro_original_pai_6 String?
   pelagem_pai_6           String?
-  hypp_pai_6              Int?
-  impressive_pai_6        Int?
-
+  
   id_mae_6                Int?
   nome_mae_6              String?
   registro_mae_6          String?
   registro_original_mae_6 String?
   pelagem_mae_6           String?
-  hypp_mae_6              Int?
-  impressive_mae_6        Int?
-
+  
   id_pai_7                Int?
   nome_pai_7              String?
   registro_pai_7          String?
   registro_original_pai_7 String?
   pelagem_pai_7           String?
-  hypp_pai_7              Int?
-  impressive_pai_7        Int?
-
+  
   id_mae_7                Int?
   nome_mae_7              String?
   registro_mae_7          String?
   registro_original_mae_7 String?
   pelagem_mae_7           String?
-  hypp_mae_7              Int?
-  impressive_mae_7        Int?
-
+  
   id_pai_8                Int?
   nome_pai_8              String?
   registro_pai_8          String?
   registro_original_pai_8 String?
   pelagem_pai_8           String?
-  hypp_pai_8              Int?
-  impressive_pai_8        Int?
-
+  
   id_mae_8                Int?
   nome_mae_8              String?
   registro_mae_8          String?
   registro_original_mae_8 String?
   pelagem_mae_8           String?
-  hypp_mae_8              Int?
-  impressive_mae_8        Int?
-
+  
   id_pai_9                Int?
   nome_pai_9              String?
   registro_pai_9          String?
   registro_original_pai_9 String?
   pelagem_pai_9           String?
-  hypp_pai_9              Int?
-  impressive_pai_9        Int?
-
+  
   id_mae_9                Int?
   nome_mae_9              String?
   registro_mae_9          String?
   registro_original_mae_9 String?
   pelagem_mae_9           String?
-  hypp_mae_9              Int?
-  impressive_mae_9        Int?
-
+  
   id_pai_10               Int?
   nome_pai_10             String?
   registro_pai_10         String?
   registro_original_pai_10 String?
   pelagem_pai_10          String?
-  hypp_pai_10             Int?
-  impressive_pai_10       Int?
-
+  
   id_mae_10               Int?
   nome_mae_10             String?
   registro_mae_10         String?
   registro_original_mae_10 String?
   pelagem_mae_10          String?
-  hypp_mae_10             Int?
-  impressive_mae_10       Int?
-
+  
   id_pai_11               Int?
   nome_pai_11             String?
   registro_pai_11         String?
   registro_original_pai_11 String?
   pelagem_pai_11          String?
-  hypp_pai_11             Int?
-  impressive_pai_11       Int?
-
+  
   id_mae_11               Int?
   nome_mae_11             String?
   registro_mae_11         String?
   registro_original_mae_11 String?
   pelagem_mae_11          String?
-  hypp_mae_11             Int?
-  impressive_mae_11       Int?
-
+  
   id_pai_12               Int?
   nome_pai_12             String?
   registro_pai_12         String?
   registro_original_pai_12 String?
   pelagem_pai_12          String?
-  hypp_pai_12             Int?
-  impressive_pai_12       Int?
-
+  
   id_mae_12               Int?
   nome_mae_12             String?
   registro_mae_12         String?
   registro_original_mae_12 String?
   pelagem_mae_12          String?
-  hypp_mae_12             Int?
-  impressive_mae_12       Int?
-
+  
   id_pai_13               Int?
   nome_pai_13             String?
   registro_pai_13         String?
   registro_original_pai_13 String?
   pelagem_pai_13          String?
-  hypp_pai_13             Int?
-  impressive_pai_13       Int?
-
+  
   id_mae_13               Int?
   nome_mae_13             String?
   registro_mae_13         String?
   registro_original_mae_13 String?
   pelagem_mae_13          String?
-  hypp_mae_13             Int?
-  impressive_mae_13       Int?
-
+  
   id_pai_14               Int?
   nome_pai_14             String?
   registro_pai_14         String?
   registro_original_pai_14 String?
   pelagem_pai_14          String?
-  hypp_pai_14             Int?
-  impressive_pai_14       Int?
-
+  
   id_mae_14               Int?
   nome_mae_14             String?
   registro_mae_14         String?
   registro_original_mae_14 String?
   pelagem_mae_14          String?
-  hypp_mae_14             Int?
-  impressive_mae_14       Int?
-
+  
   animalId                Int     @unique
   animal                  Animal   @relation(fields: [animalId], references: [id])
   @@map("animal_ancestral")
@@ -355,7 +248,7 @@ model Task {
   done        Boolean  @default(false)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-
+  daysRecurrence Int
   animalId    Int
   animals     Animal   @relation(fields: [animalId], references: [id])
   @@map("tasks")

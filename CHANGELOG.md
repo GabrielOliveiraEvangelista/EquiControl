@@ -55,6 +55,7 @@ git push --tags
 - [x] Implementação do ORM (Prisma) no Backend
 - [x] Implementação dos models no schema.prima
 - [x] Refatoração do UsersController (data.forEach)
+- [x] Ajustar a gravação do json de animal ao chamar a rota users
 
 ### 📅 Ajustes planejados
 
