@@ -56,13 +56,13 @@ git push --tags
 - [x] Implementação dos models no schema.prima
 - [x] Refatoração do UsersController (data.forEach)
 - [x] Ajustar a gravação do json de animal ao chamar a rota users
+- [x] Tratar os dados que esta vindo do JSON
 
 ### 📅 Ajustes planejados
 
 - [x] Definir estrutura do **schema global Zod**
 - [x] Refatorar arquivos que usam `if` para validar **variáveis de ambiente**
 - [ ] Migrar validações de **`ABQM_USUARIO`** e **`ABQM_SENHA`** para o _frontend_
-- [ ] Tratar os dados que esta vindo do JSON e ajustar as colunas do banco para tal ajuste (DATATIME, BOOLEAN)
 - [ ] Não posso deixar duas tarefas da mesma (com o mesmo title) para um mesmo animal
 
 ## 🗄️ Log de Versões – Backend
